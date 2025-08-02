@@ -1,0 +1,155 @@
+name: 🔧 Technical Debt Report
+description: Report technical debt, code issues, or areas for improvement
+title: "[TECH DEBT] "
+labels: ["technical-debt", "maintenance"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 📋 Technical Debt Report
+        
+        Thank you for helping us improve our code quality! 
+        Use this form to report technical debt, code smells, or areas that need improvement.
+
+  - type: dropdown
+    id: debt_category
+    attributes:
+      label: 🏷️ Technical Debt Category
+      description: Select the most appropriate category
+      options:
+        - Code Quality (Code Smells, Duplication)
+        - Performance Issues
+        - Outdated Dependencies
+        - Missing Tests
+        - Documentation
+        - Security Vulnerabilities
+        - Architecture Problems
+        - Missing Error Handling
+        - Other
+      default: 0
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 📊 Priority
+      description: How urgent is this issue to resolve?
+      options:
+        - 🔴 Critical - Blocking development or causing issues
+        - 🟡 High - Should be resolved soon
+        - 🟢 Medium - Can be addressed in upcoming sprints
+        - 🔵 Low - Nice-to-have, time permitting
+      default: 2
+    validations:
+      required: true
+
+  - type: input
+    id: affected_component
+    attributes:
+      label: 🎯 Affected Component/File
+      description: Which file, module, or component is affected?
+      placeholder: "e.g., src/components/UserService.js, Authentication Module"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem_description
+    attributes:
+      label: 📝 Problem Description
+      description: Describe the technical debt or issue in detail
+      placeholder: |
+        Please describe:
+        - What is the specific problem?
+        - Why is it problematic?
+        - What impact does it have?
+      value: |
+        **Problem:**
+        
+        
+        **Impact:**
+        
+        
+        **Why it should be fixed:**
+        
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_code
+    attributes:
+      label: 💻 Current Code (optional)
+      description: Add relevant code snippets
+      placeholder: |
+        ```javascript
+        // Problematic code here
+        ```
+      render: markdown
+
+  - type: textarea
+    id: proposed_solution
+    attributes:
+      label: 💡 Proposed Solution
+      description: Do you have an idea how this problem could be solved?
+      placeholder: |
+        Describe your solution approach:
+        - What changes are needed?
+        - Are there alternative approaches?
+        - What risks might arise?
+
+  - type: checkboxes
+    id: impact_areas
+    attributes:
+      label: 🎯 Impact Areas
+      description: Which areas could be affected by a solution?
+      options:
+        - label: Performance
+        - label: Security
+        - label: Maintainability
+        - label: Testability
+        - label: Documentation
+        - label: User Experience
+        - label: Developer Experience
+        - label: Scalability
+
+  - type: input
+    id: estimated_effort
+    attributes:
+      label: ⏱️ Estimated Effort
+      description: How much effort do you estimate to fix this issue?
+      placeholder: "e.g., 2 hours, 1 day, 1 sprint, unknown"
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: 📎 Additional Information
+      description: Any other relevant information, links, screenshots, etc.
+      placeholder: |
+        - Links to relevant documentation
+        - Screenshots for UI issues
+        - References to similar issues
+        - Deadline information
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: ✅ Confirmation
+      description: Please confirm the following points
+      options:
+        - label: I have checked that no similar issue already exists
+          required: true
+        - label: I have provided all relevant information
+          required: true
+        - label: This issue affects code quality or development
+          required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        
+        **Thank you for contributing to improving our codebase! 🚀**
+        
+        After creation, this issue will be automatically labeled with `technical-debt` 
+        and `maintenance` and can be prioritized by the team.

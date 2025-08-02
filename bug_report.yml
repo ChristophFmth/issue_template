@@ -1,0 +1,174 @@
+name: Bug Report
+description: Create a report to help us improve
+title: "[BUG] "
+labels: ["bug", "needs-triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🐛 Bug Report
+        Thank you for reporting a bug! Please fill out the form below as detailed as possible.
+
+  - type: checkboxes
+    id: prerequisites
+    attributes:
+      label: Prerequisites
+      description: Please confirm the following before submitting
+      options:
+        - label: I have searched existing issues and found no similar bug report
+          required: true
+        - label: I am using the latest version of the software
+          required: false
+        - label: I have read the documentation
+          required: false
+
+  - type: input
+    id: bug-summary
+    attributes:
+      label: Brief Summary
+      description: A concise description of the problem
+      placeholder: e.g., "Application crashes when clicking the save button"
+    validations:
+      required: true
+
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Detailed Description
+      description: A clear and detailed description of the bug
+      placeholder: Describe the bug in as much detail as possible...
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: Steps to Reproduce
+      description: Steps to reproduce the behavior
+      placeholder: |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: A clear and concise description of what you expected to happen
+      placeholder: Describe what should have happened...
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual Behavior
+      description: What happened instead?
+      placeholder: Describe what actually happened...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: How severely does this bug impact your work?
+      options:
+        - Low - Cosmetic issue, no functionality affected
+        - Medium - Functionality impacted but workaround available
+        - High - Important functionality unavailable
+        - Critical - Application unusable
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: Frequency
+      description: How often does this bug occur?
+      options:
+        - Always (100%)
+        - Frequently (>75%)
+        - Sometimes (25-75%)
+        - Rarely (<25%)
+        - Only occurred once
+    validations:
+      required: true
+
+  - type: input
+    id: device-type
+    attributes:
+      label: Device
+      description: What device does the bug occur on?
+      placeholder: e.g., iPhone 14, Samsung Galaxy S23, MacBook Pro M2, etc.
+
+  - type: input
+    id: operating-system
+    attributes:
+      label: Operating System
+      description: Operating system and version
+      placeholder: e.g., iOS 17.1, Android 14, Windows 11, macOS Sonoma 14.1
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser (if applicable)
+      description: Browser and version
+      placeholder: e.g., Chrome 119, Firefox 120, Safari 17.1
+
+  - type: input
+    id: app-version
+    attributes:
+      label: App/Software Version
+      description: Version of the affected application
+      placeholder: e.g., v2.1.3, Build 1234
+
+  - type: textarea
+    id: error-logs
+    attributes:
+      label: Error Messages/Logs
+      description: Copy and paste any relevant error messages or log output here
+      placeholder: |
+        Paste error messages, stack traces, or relevant logs here...
+      render: shell
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots/Videos
+      description: |
+        Add screenshots or videos that illustrate the problem.
+        Tip: You can drag and drop files into this field.
+
+  - type: textarea
+    id: workaround
+    attributes:
+      label: Workaround
+      description: Is there a temporary solution for this problem?
+      placeholder: Describe any workarounds you've found...
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other information that might help solve the problem
+      placeholder: |
+        - Network connection (WiFi/Mobile)
+        - Other installed software
+        - Special configuration
+        - Similar problems in the past
+        - etc.
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Confirmation
+      options:
+        - label: I confirm that all provided information is accurate
+          required: true
+        - label: I am willing to help resolve this issue and provide additional information if needed
+          required: false
