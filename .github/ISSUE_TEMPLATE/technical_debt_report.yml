@@ -114,11 +114,26 @@ body:
         - label: Scalability
 
   - type: input
-    id: estimated_effort
+    id: estimated_effort_number
     attributes:
-      label: ⏱️ Estimated Effort
-      description: How much effort do you estimate to fix this issue?
-      placeholder: "e.g., 2 hours, 1 day, 1 sprint, unknown"
+      label: ⏱️ Estimated Effort (Number)
+      description: Enter the estimated effort as a number
+      placeholder: "e.g., 2, 8, 0.5"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: estimated_effort_unit
+    attributes:
+      label: ⏱️ Estimated Effort (Unit)
+      description: Select the time unit for the estimate
+      options:
+        - min
+        - h
+        - d
+      default: 1
+    validations:
+      required: false
 
   - type: textarea
     id: additional_context
