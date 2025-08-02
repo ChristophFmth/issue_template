@@ -1,6 +1,6 @@
 name: 🪲 Bug Report
 description: Create a report to help us improve
-title: "[BUG] "
+title: "[BUG][SUBJECT]"
 labels: ["bug", "needs-triage"]
 assignees: []
 body:

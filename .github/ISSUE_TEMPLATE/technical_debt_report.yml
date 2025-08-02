@@ -1,6 +1,6 @@
 name: 🔧 Technical Debt Report
 description: Report technical debt, code issues, or areas for improvement
-title: "[TECH DEBT] "
+title: "[TECH DEBT][SUBJECT]"
 labels: ["technical-debt", "maintenance"]
 assignees: []
 body:
