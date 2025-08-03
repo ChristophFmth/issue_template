@@ -63,15 +63,6 @@ body:
     validations:
       required: true
 
-  - type: textarea
-    id: actual-behavior
-    attributes:
-      label: ❌ Actual Behavior
-      description: What happened instead?
-      placeholder: Describe what actually happened...
-    validations:
-      required: true
-
   - type: dropdown
     id: severity
     attributes:
